@@ -7,7 +7,7 @@ import urllib
 import sys
 import string
 
-reload(sys)  # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入
+reload(sys)
 sys.setdefaultencoding('utf-8')
 
 
@@ -16,7 +16,6 @@ class china_paper(RedisSpider):
     redis_key = 'china_paper:start_urls'
     start_urls = ['http://www.paper.com.cn/']
     join_url = 'paper_industry/PaDemand.php?demandClass=2&page='
-    # page_num = 2
     page_num = 2604
     child_head = 'http://www.paper.com.cn'
 
